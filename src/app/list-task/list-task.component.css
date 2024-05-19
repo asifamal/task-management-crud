@@ -1,0 +1,138 @@
+.todo-app {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 30px;
+}
+
+.todo-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.todo-table th,
+.todo-table td {
+    border: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.todo-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.edit-btn,
+.delete-btn {
+    background-color: #fe4880;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.task-heading {
+    text-align: center;
+
+}
+
+.task-heading h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #6DC5D1;
+}
+
+.btn {
+    width: 6.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   button:hover {
+    color: black;
+   }
+   
+   button:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+
+   .create-task{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .dlt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+   }
+   
+   
+
+   .dlt-all  {
+    position: relative;
+    background-color: rgb(230, 34, 77);
+    border-radius: 5px;
+    box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+    padding: 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 154px;
+    height: 49px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  button::before {
+    content: "";
+    background-color: rgb(248, 50, 93);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+  }
+  
+  button:hover::before {
+    width: 100%;
+  }
+  

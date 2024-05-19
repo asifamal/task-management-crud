@@ -1,0 +1,40 @@
+<div class="task-heading">
+    <h1>Task Manager</h1>
+</div>
+<div class="create-task">
+    <button class="btn" type="button" routerLink="/create" routerLinkActive="Active">Create Task</button>
+</div>
+
+
+
+
+
+<div class="todo-app">
+    <table class="todo-table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> i </td>
+                <td> todo.title</td>
+                <td> todo.description </td>
+                <td> todo.status</td>
+                <td>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="dlt"><button class="dlt-all">Delete All</button></div>
+
+
+</div>
+<router-outlet></router-outlet>
