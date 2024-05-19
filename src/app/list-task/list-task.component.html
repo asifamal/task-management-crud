@@ -2,12 +2,10 @@
     <h1>Task Manager</h1>
 </div>
 <div class="create-task">
-    <button class="btn" type="button" routerLink="/create" routerLinkActive="Active">Create Task</button>
+    <button type="button" class="btn btn-success btn-lg" type="button" routerLink="/create" routerLinkActive="Active">
+        Create Task
+    </button>
 </div>
-
-
-
-
 
 <div class="todo-app">
     <table class="todo-table">
@@ -21,19 +19,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td> i </td>
-                <td> todo.title</td>
-                <td> todo.description </td>
-                <td> todo.status</td>
+            <tr *ngFor="let task of tasksFromService;let i = index">
+                <td> {{i+1}} </td>
+                <td> {{task.title}}</td>
+                <td> {{task.description}} </td>
+                <td> {{task.status}}</td>
                 <td>
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
+                    <button type="button" class="btn btn-outline-primary" (click)="onUpdateClick(task.id)">Edit</button>
+                    <button type="button" class="btn btn-outline-danger">Delete</button>
                 </td>
             </tr>
         </tbody>
     </table>
-    <div class="dlt"><button class="dlt-all">Delete All</button></div>
+    <div class="dlt"><button type="button" class="btn btn-danger btn-lg">Delete All</button></div>
 
 
 </div>

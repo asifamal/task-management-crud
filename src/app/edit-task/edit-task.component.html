@@ -1,4 +1,4 @@
-<form [formGroup]="taskForm" (ngSubmit)="onCreateTask(taskForm.value)">
+<form [formGroup]="taskForm" (ngSubmit)="onUpdateTask(taskForm.value)">
     <div class="input-fields">
         <div class="form-group">
             <h5>Task Title</h5>
@@ -26,11 +26,10 @@
     </div>
 
     <div class="btn">
-        <button type="submit">Add Task</button>
-        <button style="margin-left: 10px;" routerLink="/home">Go Home</button>
+        <button type="submit">Update Task</button>
     </div>
 </form>
 
 
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->

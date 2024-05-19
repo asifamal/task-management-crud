@@ -1,6 +1,6 @@
-export class Tasks{
+export class Tasks {
     title!: string;
     description!: string;
     status!: string;
-    id!: string;
+    id?: string;
 }

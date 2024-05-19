@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TasksService } from '../services/tasks.service';
-import { Task } from 'zone.js/lib/zone-impl';
-import { Router } from 'express';
+import { Router } from '@angular/router';;
 
 @Component({
   selector: 'app-create-task',
   templateUrl: './create-task.component.html',
   styleUrl: './create-task.component.css'
 })
-export class CreateTaskComponent{
+export class CreateTaskComponent{ 
 
-  constructor(private tasks: TasksService, private form: FormBuilder, private router: Router){}
+  constructor(private tasks: TasksService, private form: FormBuilder, private router: Router) {}
 
   taskForm!: FormGroup
 
@@ -23,13 +22,11 @@ export class CreateTaskComponent{
     })
   }
 
-  onCreateTask(taskData:{title:string, description:string, status: string}){
-    if(this.taskForm.valid){
-      this.tasks.createTask(taskData).subscribe((res) => {
-        console.log(res)
-      })
+  onCreateTask(data: { title: string; description: string; status: string }) {
+    if (this.taskForm.valid) {
+      this.tasks.createTask(data)
     }
+    this.router.navigate(['home'])
   }
-  
 
 }
