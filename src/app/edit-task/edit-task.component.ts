@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Tasks } from '../models/tasks.models';
 import { TasksService } from '../services/tasks.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-task',
@@ -35,6 +36,8 @@ export class EditTaskComponent implements OnInit {
       this.tasks.updateTask(this.tasks.currentTaskID,taskDataNew).subscribe((res) => {
         this.route.navigate(['/home'])
       })
+    }else{
+      Swal.fire("Please Fill In All The Fields");
     }
   }
 

@@ -1,11 +1,11 @@
 <form [formGroup]="taskForm" (ngSubmit)="onCreateTask(taskForm.value)">
     <div class="input-fields">
         <div class="form-group">
-            <h5>Task Title</h5>
+            <h5>Task Title*</h5>
             <input type="email" class="form-control" id="exampleFormControlInput1" formControlName="title">
         </div>
         <div class="form-group">
-            <h5 class="label">Task Description </h5>
+            <h5 class="label">Task Description* </h5>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="description"></textarea>
         </div>
     </div>
