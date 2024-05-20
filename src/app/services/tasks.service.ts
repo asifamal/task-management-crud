@@ -15,9 +15,7 @@ export class TasksService {
   constructor(private http: HttpClient) { }
 
   createTask(task: any) {
-    return this.http.post(this.url, task).subscribe((res) => {
-      console.log(res);
-    })
+    return this.http.post(this.url, task)
   }
 
   getTask() {
@@ -35,8 +33,17 @@ export class TasksService {
       );
   }
 
+  deleteTask(id:string){  
+    return this.http.delete('https://task-management-3ce9a-default-rtdb.asia-southeast1.firebasedatabase.app/tasks/'+id+'.json')
+
+  }
+
   updateTask(id:string, task:Tasks){
     return this.http.put('https://task-management-3ce9a-default-rtdb.asia-southeast1.firebasedatabase.app/tasks/'+id+'.json',task)
+   }
+
+   deleteAll(){
+    return this.http.delete(this.url)
    }
 
 }

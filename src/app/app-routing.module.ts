@@ -5,10 +5,11 @@ import { CreateTaskComponent } from './create-task/create-task.component';
 import { EditTaskComponent } from './edit-task/edit-task.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component:ListTaskComponent},
   {path: 'create' , component:CreateTaskComponent},
   {path: 'edit/:id', component:EditTaskComponent},
-  {path: '', redirectTo: 'home', pathMatch: 'full'}
+  
 ];
 
 @NgModule({
